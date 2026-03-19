@@ -1,8 +1,36 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF8">
-    <meta name="description" content=" FlameAI; The Most Powerful Ai, Tailored To Your Needs.">
-    <link rel="stylesheet" href="styles/styles.css">    
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inferno Engine v2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-wrapper">
+        <div class="fire-bg-layer">
+            <canvas id="fireCanvas"></canvas>
+            <div class="smoke-overlay"></div>
+        </div>
+
+        <div class="content-ui">
+            <h1 class="fire-text">INFERNO</h1>
+            <div class="button-group">
+                <button class="menu-btn glow-target">INITIALIZE SYSTEM</button>
+                <button class="menu-btn glow-target">ACCESS ARCHIVES</button>
+                <button class="menu-btn glow-target">CORE TERMINATE</button>
+            </div>
+        </div>
+    </div>
+
+    <svg style="display:none;">
+        <filter id="heat">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="1">
+                <animate attributeName="seed" from="1" to="100" dur="8s" repeatCount="indefinite" />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" scale="20" />
+        </filter>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
 </html>
