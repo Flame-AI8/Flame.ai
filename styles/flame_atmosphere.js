@@ -9,7 +9,7 @@ window.onload = function() {
     let particles = [];
     let sparks = [];
 
-    const sparkSound = new Audio('https://www.myinstants.com');
+    const sparkSound = new Audio('https://www.myinstants.com/media/sounds/thunder-zap.mp3');
     
     function playSpark() {
         const s = sparkSound.cloneNode();
